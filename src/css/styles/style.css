@@ -15145,7 +15145,7 @@ a.btn-slider:hover {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .testi-slider .flex-control-paging li a {
@@ -16713,4 +16713,32 @@ img {
 
 .no-cursor {
   cursor: not-allowed;
+}
+/* MY CUSTOMIZATION */
+/* React slick slider css */
+/* Change arrow color to black */
+
+.slick-prev:before,
+.slick-next:before {
+  background-color: white !important;
+  color: black !important;
+  font-size: 28px !important;
+}
+.slick-prev {
+  left: -35px !important;
+}
+.error__message {
+  background-color: #eff6ff;
+  font-size: 28px;
+  text-align: center;
+  color: #3b82f6;
+  padding: 1rem;
+  border-left: 5px solid #3b82f6;
+  border-radius: 5px;
+}
+.error__message:hover{
+  background: var(--primary-color);
+  transition: 0.7s;
+  color: white;
+  border-left: 5px solid red;
 }
