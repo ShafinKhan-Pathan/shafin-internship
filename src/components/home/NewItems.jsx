@@ -13,7 +13,6 @@ const NewItems = () => {
     const newItemsData = async () => {
       try {
         const newItemResults = await getNewItems();
-        console.log(newItemResults)
         setNewItems(newItemResults);
       } catch (error) {
         setError(error);
