@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getHotCollections } from "../../services/Api";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Skeleton from "../UI/Skeleton";
+import CustomSlider from "../UI/CustomSlider";
 
 const HotCollections = () => {
   const [hotCollections, setHotCollections] = useState([]);
@@ -24,30 +22,6 @@ const HotCollections = () => {
     };
     hotCollectionData();
   }, []);
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    arrows: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -62,7 +36,7 @@ const HotCollections = () => {
           </h1>
         )}
         {loading ? (
-          <Slider {...settings}>
+          <CustomSlider>
             {[...Array(4)].map((_, index) => (
               <div key={index} className="p-2">
                 <div className="nft_coll">
@@ -78,9 +52,9 @@ const HotCollections = () => {
                 </div>
               </div>
             ))}
-          </Slider>
+          </CustomSlider>
         ) : (
-          <Slider {...settings}>
+          <CustomSlider>
             {hotCollections.map((collectionElement) => (
               <div key={collectionElement.id} className="p-2">
                 <div className="nft_coll">
@@ -112,7 +86,7 @@ const HotCollections = () => {
                 </div>
               </div>
             ))}
-          </Slider>
+          </CustomSlider>
         )}
       </div>
     </section>
