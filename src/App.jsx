@@ -6,6 +6,7 @@ import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import NewItems from "./components/home/NewItems";
+import TopSellers from "./components/home/TopSellers";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/author/:id" element={<Author newItems = {NewItems} />} />
+        <Route path="/author/:id" element={<Author newItems = {NewItems} topSellers = {TopSellers} />} />
         <Route path="/item-details/:id" element={<ItemDetails newItems = {NewItems} />} />
       </Routes>
       <Footer />
