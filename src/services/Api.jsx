@@ -11,3 +11,8 @@ export const getNewItems = async () => {
   const results = await axios.get(`${BASE_URL}/newItems`);
   return results.data;
 };
+
+export const getTopSellers = async () =>{
+    const results = await axios.get(`${BASE_URL}/topSellers`)
+    return results.data
+}
