@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://us-central1-nft-cloud-functions.cloudfunctions.net";
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export const getHotCollections = async () => {
   const results = await axios.get(`${BASE_URL}/hotCollections`);
