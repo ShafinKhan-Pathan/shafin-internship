@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getTopSellers } from "../../services/Api";
+import {getTopSellers} from '../../services/Api'
 import Skeleton from "../UI/Skeleton";
 
 const TopSellers = () => {
@@ -11,7 +11,7 @@ const TopSellers = () => {
   useEffect(() => {
     const topSellersData = async () => {
       try {
-        const topSellersResults = await getTopSellers();
+        const topSellersResults = await getTopSellers()
         console.log(topSellersResults);
         setTopSellers(topSellersResults);
       } catch (error) {

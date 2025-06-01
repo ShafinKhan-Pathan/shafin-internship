@@ -16,3 +16,13 @@ export const getTopSellers = async () =>{
     const results = await axios.get(`${BASE_URL}/topSellers`)
     return results.data
 }
+
+export const getExplore = async () =>{
+    const results = await axios.get(`${BASE_URL}/explore`)
+    return results.data
+}
+
+export const getExploreByFilter = async (query) =>{
+    const results = await axios.get(`${BASE_URL}/explore?filter=${query}`)
+    return results.data
+}
