@@ -26,3 +26,8 @@ export const getExploreByFilter = async (query) =>{
     const results = await axios.get(`${BASE_URL}/explore?filter=${query}`)
     return results.data
 }
+
+export const getAuthorById = async (authId) =>{
+    const results = await axios.get(`${BASE_URL}/authors?author=${authId}`)
+    return results.data
+}
