@@ -12,7 +12,6 @@ const TopSellers = () => {
     const topSellersData = async () => {
       try {
         const topSellersResults = await getTopSellers()
-        console.log(topSellersResults);
         setTopSellers(topSellersResults);
       } catch (error) {
         setError(error);
