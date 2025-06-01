@@ -8,10 +8,12 @@ import Footer from "./components/Footer";
 import NewItems from "./components/home/NewItems";
 import TopSellers from "./components/home/TopSellers";
 import HotCollections from "./components/home/HotCollections";
+import AOSProvider from "./components/UI/AOSProvider";
 
 function App() {
   return (
     <Router>
+      <AOSProvider />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

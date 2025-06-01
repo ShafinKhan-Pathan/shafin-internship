@@ -22,7 +22,7 @@ const AuthorItems = ({ author, loading }) => {
                 </div>
               </div>
             ))}</> : <>{nftCollection?.map((items) => (
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={items.id}>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={items.id} data-aos="fade-up">
               <div className="nft__item" >
                 <div className="author_list_pp">
                   <Link to="">

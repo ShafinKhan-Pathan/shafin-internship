@@ -4,7 +4,7 @@ import TimerFeature from "./TimeFeature";
 const NftCard = ({ item }) => {
   return (
     <>
-      <div className="nft__item">
+      <div className="nft__item" data-aos="zoom-in-down">
         <div className="author_list_pp">
           <Link
             to={`/author/${item.authorId}`}

@@ -57,7 +57,7 @@ const HotCollections = () => {
           <CustomSlider>
             {hotCollections.map((collectionElement) => (
               <div key={collectionElement.id} className="p-2">
-                <div className="nft_coll">
+                <div className="nft_coll" data-aos="zoom-in-up">
                   <div className="nft_wrap">
                     <Link to={`/item-details/${collectionElement.nftId}`}>
                       <img

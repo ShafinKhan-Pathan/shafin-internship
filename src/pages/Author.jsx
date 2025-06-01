@@ -100,7 +100,7 @@ const Author = () => {
                     </>
                   ) : (
                     <>
-                      <div className="de-flex-col">
+                      <div className="de-flex-col" data-aos="ease-in-out">
                         <div className="profile_avatar">
                           <img src={author.authorImage} alt="" />
 
