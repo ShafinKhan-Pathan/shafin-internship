@@ -31,3 +31,7 @@ export const getAuthorById = async (authId) =>{
     const results = await axios.get(`${BASE_URL}/authors?author=${authId}`)
     return results.data
 }
+export const getItemDetailsById = async (itemId) =>{
+    const results = await axios.get(`${BASE_URL}/itemDetails?nftId=${itemId}`)
+    return results.data
+}
