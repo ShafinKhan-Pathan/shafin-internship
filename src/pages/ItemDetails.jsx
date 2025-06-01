@@ -126,14 +126,15 @@ const ItemDetails = () => {
               ) : (
                 <>
                   {" "}
-                  <div className="col-md-6 text-center">
+                  <div className="col-md-6 text-center" data-aos="fade">
                     <img
                       src={itemDetails.nftImage}
                       className="img-fluid img-rounded mb-sm-30 nft-image"
                       alt=""
+                      
                     />
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6" data-aos="fade">
                     <div className="item_info">
                       <h2>
                         {itemDetails.title} #{itemDetails.tag}

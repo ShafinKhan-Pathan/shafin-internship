@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {getTopSellers} from '../../services/Api'
+import { getTopSellers } from "../../services/Api";
 import Skeleton from "../UI/Skeleton";
+import Aos from "aos";
 
 const TopSellers = () => {
   const [topSellers, setTopSellers] = useState([]);
@@ -11,7 +12,7 @@ const TopSellers = () => {
   useEffect(() => {
     const topSellersData = async () => {
       try {
-        const topSellersResults = await getTopSellers()
+        const topSellersResults = await getTopSellers();
         setTopSellers(topSellersResults);
       } catch (error) {
         setError(error);
@@ -21,7 +22,6 @@ const TopSellers = () => {
     };
     topSellersData();
   }, []);
-
   return (
     <section id="section-popular" className="pb-5">
       <div className="container">
@@ -71,7 +71,6 @@ const TopSellers = () => {
                     </div>
                   </li>
                 ))}
-                ,
               </ol>
             </div>
           ) : (
@@ -79,7 +78,7 @@ const TopSellers = () => {
               <ol className="author_list">
                 {topSellers.map((elem) => (
                   <li key={elem.id}>
-                    <div className="author_list_pp">
+                    <div className="author_list_pp" data-aos="fade-in">
                       <Link to={`/author/${elem.authorId}`}>
                         <img
                           className="lazy pp-author"
